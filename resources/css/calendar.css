@@ -1,0 +1,88 @@
+.calendar {
+    display: flex;
+    flex-flow: column;
+}
+.calendar .header .month-year {
+    font-size: 20px;
+    font-weight: bold;
+    color: #636e73;
+    padding: 20px 0;
+}
+.calendar .days {
+    display: flex;
+    flex-flow: wrap;
+}
+.calendar .days .day_name {
+    width: calc(100% / 7);
+    border-right: 1px solid #005F6B;
+    padding: 20px;
+    text-transform: uppercase;
+    font-size: 12px;
+    font-weight: bold;
+    color: #008C9E;
+    background-color: #343838;
+}
+.calendar .days .day_name:nth-child(7) {
+    border: none;
+}
+.calendar .days .day_num {
+    display: flex;
+    flex-flow: column;
+    width: calc(100% / 7);
+    border-right: 1px solid #005F6B;
+    border-bottom: 1px solid #005F6B;
+    padding: 15px;
+    font-weight: bold;
+    color: #7c878d;
+    cursor: pointer;
+    min-height: 100px;
+}
+.calendar .days .day_num span {
+    display: inline-flex;
+    width: 30px;
+    font-size: 14px;
+}
+.calendar .days .day_num .event {
+    margin-top: 10px;
+    font-weight: 500;
+    font-size: 14px;
+    padding: 3px 6px;
+    border-radius: 4px;
+    background-color: #00DFFC;
+    color: #fff;
+    word-wrap: break-word;
+}
+.calendar .days .day_num:nth-child(7n+1) {
+    border-left: 1px solid #005F6B;
+}
+.calendar .days .day_num:hover {
+    background-color: #005F6B;
+}
+.calendar .days .day_num.ignore {
+    background-color: #005f6b55;
+    color: #ced2d4;
+    cursor: inherit;
+}
+.calendar .days .day_num.selected {
+    background-color: #91f2ff;
+    cursor: inherit;
+}
+
+.calendar .days .day_num .event:hover > div {
+    display:block !important;
+}
+
+.eventInformation {
+    width: 100%;
+    height: auto;
+    background-color: #343838;
+    border-radius: 5px;
+    padding: 5px;
+    line-height: 15px;
+}
+
+.eventInformationUpdate {
+    color: #00DFFC;
+    margin: 0 auto;
+    display: block;
+}
